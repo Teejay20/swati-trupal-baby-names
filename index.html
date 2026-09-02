@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#9b8579">
+  <title>Help Swati &amp; Trupal Choose a Name</title>
+  <style>
+    :root{--taupe:#9b8579;--deep:#6d584e;--ink:#3d302b;--muted:#756159;--line:rgba(92,70,61,.18);--shadow:0 16px 44px rgba(73,53,44,.18)}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:linear-gradient(135deg,rgba(155,133,121,.96),rgba(180,156,143,.92));overflow-x:hidden}
+    body::before,body::after{content:"";position:fixed;z-index:-1;width:280px;height:280px;pointer-events:none;opacity:.72}
+    body::before{left:-110px;bottom:-105px;background:radial-gradient(ellipse at 65% 28%,#f4d8df 0 6%,transparent 6.7%),radial-gradient(ellipse at 48% 48%,#fff8f6 0 9%,transparent 9.7%),radial-gradient(ellipse at 72% 59%,#e4bdca 0 11%,transparent 11.7%),radial-gradient(ellipse at 28% 68%,#fcf7ee 0 14%,transparent 14.7%)}
+    body::after{right:-110px;top:-105px;background:radial-gradient(ellipse at 38% 52%,#f4d8df 0 6%,transparent 6.7%),radial-gradient(ellipse at 60% 40%,#fff8f6 0 9%,transparent 9.7%),radial-gradient(ellipse at 30% 68%,#e4bdca 0 11%,transparent 11.7%),radial-gradient(ellipse at 74% 76%,#fcf7ee 0 14%,transparent 14.7%)}
+    .wrap{width:min(760px,calc(100% - 30px));margin:auto;padding:34px 0 54px}
+    .hero{color:#fff;text-align:center;padding:10px 0 28px}.eyebrow{font:600 12px/1.4 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.88}h1{max-width:690px;margin:10px auto;font-size:clamp(35px,7vw,64px);line-height:1.05;font-weight:400}
+    .card{padding:clamp(22px,5vw,42px);background:rgba(251,248,245,.97);border:1px solid rgba(255,255,255,.72);border-radius:22px;box-shadow:var(--shadow)}.intro{text-align:center;margin-bottom:25px}.intro h2{margin:0;font-size:29px;line-height:1.2;font-weight:400}.intro p{max-width:540px;margin:9px auto 0;color:var(--muted);font-size:16px;line-height:1.55}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.field{margin-bottom:17px}.full{grid-column:1/-1}label{display:block;margin:0 0 7px;color:#5c4b43;font:600 13px Arial,sans-serif}label small{color:#86746b;font-weight:400}
+    input,select,textarea{display:block;width:100%;border:1px solid var(--line);border-radius:11px;padding:13px 14px;outline:0;background:#fffdfb;color:var(--ink);font:16px Georgia,serif}input:focus,select:focus,textarea:focus{border-color:var(--taupe);box-shadow:0 0 0 3px rgba(155,133,121,.17)}textarea{min-height:94px;resize:vertical}
+    .help{margin:7px 0 0;color:#846f65;font:13px/1.45 Arial,sans-serif}.letters{display:flex;min-height:42px;flex-wrap:wrap;gap:8px;padding-top:2px}.pill{border:1px solid rgba(155,133,121,.36);border-radius:999px;padding:9px 13px;background:#fff;color:#735e54;font:600 14px Arial,sans-serif;cursor:pointer}.pill:hover{border-color:var(--taupe)}.pill.selected{border-color:var(--taupe);background:var(--taupe);color:#fff}
+    .submit-row{margin-top:8px;text-align:center}.button{border:0;border-radius:999px;padding:14px 25px;background:var(--deep);color:#fff;font:600 15px Arial,sans-serif;cursor:pointer;box-shadow:0 9px 21px rgba(84,61,52,.2)}.button:hover{background:#5c493f}.button:disabled{opacity:.7;cursor:wait}.secondary{margin-top:16px;border:1px solid rgba(105,84,73,.27);background:transparent;color:#695449;box-shadow:none}
+    .success{display:none;margin-top:19px;border-radius:14px;padding:25px 20px;background:#f0eae6;text-align:center}.success.show{display:block}.success h3{margin:0 0 7px;font-size:28px;font-weight:400}.success p{margin:0;color:var(--muted);line-height:1.55}.privacy{max-width:570px;margin:22px auto 0;color:#79665d;font:13px/1.5 Arial,sans-serif;text-align:center}.footer{margin:20px 0 0;color:rgba(255,255,255,.87);font:13px Arial,sans-serif;text-align:center}
+    @media(max-width:610px){.wrap{width:min(100% - 22px,760px);padding-top:22px}.card{padding:23px 17px}.grid{grid-template-columns:1fr}.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="eyebrow">A tiny blessing is on the way</div>
+      <h1>Help Swati &amp; Trupal choose a name</h1>
+    </header>
+
+    <section class="card" aria-label="Baby boy name suggestion form">
+      <div class="intro">
+        <h2>Share your lovely name idea</h2>
+        <p>કૃપા કરીને રાશિ અને નામનો પ્રથમ અક્ષર પસંદ કરીને નામ સૂચવો.</p>
+      </div>
+
+      <form id="nameForm">
+        <div class="grid">
+          <div class="field">
+            <label for="rashi">રાશિ / Rashi</label>
+            <select id="rashi" required><option value="">રાશિ પસંદ કરો / Select Rashi</option></select>
+            <p class="help">ચિત્ર મુજબ રાશિ પસંદ કરો. / Choose the Rashi shown in the reference chart.</p>
+          </div>
+          <div class="field">
+            <label>નામનો પ્રથમ અક્ષર / First name letter</label>
+            <div id="letters" class="letters"><span class="help">પહેલા રાશિ પસંદ કરો / Select a Rashi first.</span></div>
+            <input id="letter" type="hidden" required>
+          </div>
+          <div class="field"><label for="english">નામ અંગ્રેજીમાં / Name in English</label><input id="english" required maxlength="80" placeholder="Example: Keshav"></div>
+          <div class="field"><label for="gujarati">નામ ગુજરાતીમાં / Name in Gujarati <small>(optional)</small></label><input id="gujarati" maxlength="80" placeholder="ઉદાહરણ: કેશવ"></div>
+          <div class="field"><label for="meaning">અર્થ / Meaning <small>(optional)</small></label><input id="meaning" maxlength="150" placeholder="Example: Lord Krishna"></div>
+          <div class="field"><label for="from">સૂચન કરનાર / Suggested by <small>(optional)</small></label><input id="from" maxlength="80" placeholder="તમારું નામ / Your name"></div>
+          <div class="field full"><label for="note">તમને નામ કેમ ગમે છે? / Why do you like this name? <small>(optional)</small></label><textarea id="note" maxlength="500" placeholder="Family connection, meaning, pronunciation, or a short note."></textarea></div>
+        </div>
+        <div class="submit-row"><button class="button" id="submit" type="submit">નામ સૂચન મોકલો / Submit suggestion</button></div>
+      </form>
+
+      <div id="success" class="success"><h3>આભાર!</h3><p>તમારા સુંદર નામ સૂચન બદલ આભાર.<br>Thank you for helping Swati &amp; Trupal choose a name.</p><button class="button secondary" id="another" type="button">બીજું નામ સૂચવો / Suggest another name</button></div>
+      <p class="privacy">Your suggestion is shared privately with Swati and Trupal. Submitted names and their shortlist are not visible to other guests.</p>
+    </section>
+    <p class="footer">Made with love for Swati &amp; Trupal’s baby boy</p>
+  </main>
+
+  <script>
+    const ENDPOINT = 'https://script.google.com/macros/s/AKfycbxFReqhDOHjMmNifyEx2IFdgIGe7Pop3MWH5dxZr1dTz3Q2zydoVRqpIuskZXbg58nk9w/exec';
+    const rashiData = {
+      'મેષ · Mesh': ['અ / A', 'લ / L', 'ઈ / I'],
+      'વૃશ્ચિક · Vrushchik': ['ન / Na', 'ય / Ya'],
+      'વૃષભ · Vrushabh': ['બ / B', 'વ / V', 'ઉ / U'],
+      'મિથુન · Mithun': ['ક / Ka', 'ઘ / Gh', 'છ / Chh'],
+      'સિંહ · Sinh': ['મ / Ma', 'ટ / Ta'],
+      'કન્યા · Kanya': ['પ / Pa', 'ઠ / Tha', 'ણ / Na'],
+      'કર્ક · Kark': ['ડ / Da', 'હ / Ha'],
+      'તુલા · Tula': ['ર / Ra', 'ત / Ta'],
+      'ધન · Dhan': ['ભ / Bha', 'ધ / Dha', 'ફ / Pha', 'ઢ / Dha'],
+      'મકર · Makar': ['ખ / Kha', 'જ / Ja'],
+      'કુંભ · Kumbh': ['ગ / Ga', 'સ / Sa', 'શ / Sha', 'ષ / Sha'],
+      'મીન · Meen': ['દ / Da', 'ચ / Cha', 'ઝ / Jha', 'થ / Tha']
+    };
+
+    const $ = selector => document.querySelector(selector);
+    const rashi = $('#rashi'), letters = $('#letters'), selected = $('#letter');
+    Object.keys(rashiData).forEach(value => rashi.add(new Option(value, value)));
+    rashi.addEventListener('change', () => {
+      selected.value = ''; letters.innerHTML = '';
+      (rashiData[rashi.value] || []).forEach(letter => {
+        const button = document.createElement('button');
+        button.type = 'button'; button.className = 'pill'; button.textContent = letter;
+        button.addEventListener('click', () => { document.querySelectorAll('.pill').forEach(item => item.classList.remove('selected')); button.classList.add('selected'); selected.value = letter; });
+        letters.appendChild(button);
+      });
+    });
+    $('#nameForm').addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!selected.value) { alert('કૃપા કરીને પ્રથમ અક્ષર પસંદ કરો. / Please select the first letter.'); return; }
+      const button = $('#submit'); button.disabled = true; button.textContent = 'મોકલી રહ્યા છીએ... / Sending...';
+      const submission = {submittedAt:new Date().toISOString(),rashi:rashi.value,syllable:selected.value,english:$('#english').value.trim(),gujarati:$('#gujarati').value.trim(),meaning:$('#meaning').value.trim(),suggestedBy:$('#from').value.trim(),note:$('#note').value.trim()};
+      try {
+        await fetch(ENDPOINT, {method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(submission)});
+        $('#nameForm').style.display = 'none'; $('#success').classList.add('show');
+      } catch (error) {
+        alert('We could not send the suggestion. Please check your internet connection and try again.'); button.disabled = false; button.textContent = 'નામ સૂચન મોકલો / Submit suggestion';
+      }
+    });
+    $('#another').addEventListener('click', () => { $('#nameForm').reset(); selected.value=''; letters.innerHTML='<span class="help">પહેલા રાશિ પસંદ કરો / Select a Rashi first.</span>'; $('#success').classList.remove('show'); $('#nameForm').style.display='block'; $('#submit').disabled=false; $('#submit').textContent='નામ સૂચન મોકલો / Submit suggestion'; window.scrollTo({top:0,behavior:'smooth'}); });
+  </script>
+</body>
+</html>
